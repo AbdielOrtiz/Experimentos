@@ -1,0 +1,54 @@
+body{
+    padding: 10px;
+}
+.title{
+    background: #0B243B;
+    color: #F3F781;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Sans-Serif;
+    margin: 0;
+}
+.title::after{
+    content: " ↑";
+}
+#welcome{
+    background: repeating-linear-gradient(45deg, #0B243B 0, #0B243B 25%,#000 0,#000 50%) 0/10px 10px;
+    font-size: 30px;
+    margin: 0px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#expUno p{
+    text-transform: capitalize;
+    text-align: center;
+    width: 100px;
+    padding: 5px;
+    font-family: serif;
+}
+#expUno .par{
+    background: #F3F781;
+    color: #000;
+    font-size: 20px;
+}
+.container{
+    background: #fff;
+    padding-top: 0;
+    margin-top: 20px;
+}
+.escondido > p{
+    display: none;
+}
+.escondido .title:hover{
+    cursor: pointer;
+}
+.escondido .title::after{
+    content: " ↓";
+}
+#expDos .degradado{
+    webkit-text-fill-color: linear-gradient(25deg, blue, #5632f1);
+    font-family: sans-serif;
+    
+}

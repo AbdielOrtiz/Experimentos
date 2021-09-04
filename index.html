@@ -1,30 +1,46 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Experiment</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="normalize.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-      <h1 id="welcome">Bienvenido al laboratorio</h1>
-      <div id="expUno" class="container escondido">
-          <h3 class="title">Resaltar los elementos pares</h3>
-          <p>impar</p>
-          <p>par</p>
-          <p>impar</p>
-          <p>par</p>
-          <p>impar</p>
-          <p>par</p>
-          <p>impar</p>
-          <p>par</p>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Experiment</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="normalize.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1 id="welcome">Bienvenido al laboratorio</h1>
+<section id="lista">
+	<div id="expUno" class="container escondido">
+		<h3 class="title">Resaltar los elementos pares</h3>
+		<div id="expUnoDiv">
+			<p>impar</p>
+			<p>par</p>
+			<p>impar</p>
+			<p>par</p>
+			<p>impar</p>
+			<p>par</p>
+			<p>impar</p>
+			<p>par</p>
+		</div>
+	</div>
+	<div id="expDos" class="container escondido">
+		<h3 class="title">Texto con degradado</h3>
+		<div>
+			<p class="degradado">Degradado</p>
+		</div>
+	</div>
+	<div id="expTres" class="container escondido">
+		<h3 class="title">Ordenanmiento burbuja <small><i> BUBBLE SORT</i></small></h3>
+      <div class="miniContainer">
+         <label id="p">Escriba el tamaño del array: </label>
+         <div><input type="text" id="valor"/>
+            <button id="sendValue">Generar array</button><button id="orderButton">Ordenar</button>
+         </div>
       </div>
-      <div id="expDos" class="container escondido">
-          <h3 class="title">Texto con degradado</h3>
-          <p class="degradado">Este texto tiene degradado</p>
       </div>
-    <script src="script.js"></script>
-  </body>
+</section>
+          <script src="script.js"></script>
+   </body>
 </html>

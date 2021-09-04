@@ -1,13 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 body{
+    font-family: sans-serif;
     padding: 10px;
 }
+
+:root{
+    --azul-exp:#0B243B;
+    --amarillo-exp:#F3F781;
+}
 .title{
-    background: #0B243B;
-    color: #F3F781;
+    background: var(--azul-exp);
+    color: var(--amarillo-exp);
     padding: 10px;
     border-radius: 5px;
-    font-family: Sans-Serif;
+    font: bold 15px sans-serif;
+    text-transform: uppercase;
     margin: 0;
+    transition: font-size 100ms;
+}
+.title:hover{
+    cursor: pointer;
+    background: #000;
+    text-decoration: underline;
 }
 .title::after{
     content: " ↑";
@@ -15,10 +29,13 @@ body{
 #welcome{
     background: repeating-linear-gradient(45deg, #0B243B 0, #0B243B 25%,#000 0,#000 50%) 0/10px 10px;
     font-size: 30px;
-    margin: 0px;
-    color: #fff;
     padding: 10px;
+    margin-top:0; 
+    color: #fff;
     border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
 }
 
 #expUno p{
@@ -26,19 +43,20 @@ body{
     text-align: center;
     width: 100px;
     padding: 5px;
-    font-family: serif;
 }
 #expUno .par{
     background: #F3F781;
     color: #000;
-    font-size: 20px;
 }
 .container{
-    background: #fff;
     padding-top: 0;
     margin-top: 20px;
+    border-radius: 5px;
+    transition: padding 100ms;
+    background: #fff;
+    width: 90%;
 }
-.escondido > p{
+.escondido div{
     display: none;
 }
 .escondido .title:hover{
@@ -47,8 +65,48 @@ body{
 .escondido .title::after{
     content: " ↓";
 }
+.mostrado{
+    border:2px solid #000; 
+    padding: 5px;
+    transition: padding 400ms;
+}
 #expDos .degradado{
-    webkit-text-fill-color: linear-gradient(25deg, blue, #5632f1);
+    background-image: linear-gradient(90deg, #ff5501, #085DE3);
     font-family: sans-serif;
-    
+    font-weight: bolder;
+    font-size: 50px;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.miniContainer{
+    background: var(--amarillo-exp);
+    padding:5px;
+    color: #000;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.miniContainer div{
+    display: flex;
+}
+button, #sendValue, #orderButton{
+    color: #fff;
+    background: var(--azul-exp);
+    font-family: monospace;
+}
+#mostrar{
+    font-family: monospace;
+}
+ul li{
+    background: var(--azul-exp);
+    color: #fff;
+    list-style-position: inside;
+    width: fit-content;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 5px;
 }

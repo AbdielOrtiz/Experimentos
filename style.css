@@ -2,11 +2,14 @@
 body{
     font-family: sans-serif;
     padding: 10px;
+    background: var(--azul-bg);
+    user-select: none;
 }
 
 :root{
     --azul-exp:#0B243B;
     --amarillo-exp:#F3F781;
+    --azul-bg: #7190EC;
 }
 .title{
     background: var(--azul-exp);
@@ -27,26 +30,22 @@ body{
     content: " ↑";
 }
 #welcome{
-    background: repeating-linear-gradient(45deg, #0B243B 0, #0B243B 25%,#000 0,#000 50%) 0/10px 10px;
+    background: var(--azul-exp);
     font-size: 30px;
     padding: 10px;
     margin-top:0; 
     color: #fff;
     border-radius: 5px;
     font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     text-align: center;
 }
 
 #expUno p{
-    text-transform: capitalize;
-    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
     width: 100px;
     padding: 5px;
-}
-#expUno .par{
-    background: #F3F781;
-    color: #000;
 }
 .container{
     padding-top: 0;
@@ -76,15 +75,15 @@ body{
     font-weight: bolder;
     font-size: 50px;
     text-transform: uppercase;
+    background-clip: text; 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .miniContainer{
     background: var(--amarillo-exp);
-    padding:5px;
+    padding:10px;
     color: #000;
     font-family: sans-serif;
-    text-transform: uppercase;
     margin-top: 10px;
     border-radius: 5px;
     display: flex;
@@ -92,6 +91,11 @@ body{
 }
 .miniContainer div{
     display: flex;
+}
+@media (max-width:460px){
+    .miniContainer div{
+        flex-direction: column;
+    }
 }
 button, #sendValue, #orderButton{
     color: #fff;
@@ -109,4 +113,13 @@ ul li{
     margin: 5px 0;
     padding: 5px;
     border-radius: 5px;
+}
+label{
+    font-weight: bold;
+}
+.miniContainer label{
+    margin-bottom: 15px;
+}
+#result{
+    overflow-x: scroll;
 }

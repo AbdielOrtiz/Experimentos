@@ -123,3 +123,8 @@ label{
 #result{
     overflow-x: scroll;
 }
+.mensajeTransformado{
+    background: red;
+    width: 50px;
+    height: 50px;
+}

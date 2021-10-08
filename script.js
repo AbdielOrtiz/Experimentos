@@ -36,7 +36,7 @@ function randomArray(length, max) {
     }
     return arreglo;
 }
-//ordena arreglos usando el método burbuka
+//ordena arreglos usando el método burbuja
 function bubbleSort(array) {
     for (let o = 0; o < array.length; o++) {
         for (let p = 0; p < array.length - 1; p++) {
@@ -60,7 +60,7 @@ let sendValue = document.getElementById("sendValue").addEventListener("click", (
         r.appendChild(msg);
         result.append(r);
     }
-    else{
+    else {
         alert("Para numeros tan grandes prueba el metodo\nQuicksort")
     }
 });
@@ -83,6 +83,41 @@ clearInput.addEventListener("click", () => {
 })
 //-------------Experimento 4-------------
 //algoritmo de ordenamiento Quicksort
-function quicksort(){
+function quicksort() {
     return 10;
 }
+//-------------Experimento 5-------------
+const abecedario = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+//algoritmo para generar nuevo abecedario
+function flip(flips) {
+    let flippedaAbc = abecedario.map(x => x);
+    if (flips > 27) { flips -= 27 }
+    let i = 0;
+    do {
+        flippedaAbc.unshift(flippedaAbc[26]);
+        flippedaAbc.pop();
+        i++;
+    } while (i < flips);
+    return flippedaAbc;
+}
+//algoritmo para transformar el mensaje
+function transform(altAbc, message) {
+    message = message.toLowerCase().split("");
+    const length = message.length;
+    for (let i = 0; i < length; i++) {
+        if (message[i] == " ") continue;
+        let altPos = abecedario.indexOf(message[i]);
+        message[i] = altAbc[altPos];
+    }
+    return message.join("");
+}
+//variables e implementación
+let transformar = document.getElementById("transformar");
+transformar.addEventListener("click", () => {
+    let mensajeNormal = document.getElementById("mensajeNormal");
+    let altAbc = flip(new Date().getDay());
+    let altMsg = transform(altAbc, mensajeNormal.value);
+    let msjT = document.querySelector(".mensajeTransformado");
+    let child = document.createTextNode(altMsg);
+    msjT.append(child)
+})
